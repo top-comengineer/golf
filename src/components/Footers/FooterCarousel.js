@@ -25,16 +25,20 @@ const SlideItem = styled.div`
 `;
 
 const imgData = [
-  "assets/img/footer/logo (1).jpg",
-  "assets/img/footer/logo (2).jpg",
-  "assets/img/footer/logo (3).jpg",
-  "assets/img/footer/logo (4).jpg",
-  "assets/img/footer/logo (1).jpg",
-  "assets/img/footer/logo (2).jpg",
-  "assets/img/footer/logo (3).jpg",
-  "assets/img/footer/logo (4).jpg"
+  "assets/img/footer/footer (1).webp",
+  "assets/img/footer/footer (2).webp",
+  "assets/img/footer/footer (3).webp",
+  "assets/img/footer/footer (4).webp",
+  "assets/img/footer/footer (5).webp",
+  "assets/img/footer/footer (6).webp",
+  "assets/img/footer/footer (1).webp",
+  "assets/img/footer/footer (2).webp",
+  "assets/img/footer/footer (3).webp",
+  "assets/img/footer/footer (4).webp",
+  "assets/img/footer/footer (5).webp",
+  "assets/img/footer/footer (6).webp",
 ];
-const carouselItems = range(noOfItems).map((index) => (
+const carouselItems = range(noOfItems).map(index => (
   <SlideItem key={index} style={{ borderRadius: "15px" }}>
     <img
       src={imgData[index]}
@@ -48,7 +52,7 @@ const carouselItems = range(noOfItems).map((index) => (
 
 export default class FooterCarousel extends React.Component {
   state = {
-    activeItemIndex: 0
+    activeItemIndex: 0,
   };
 
   componentDidMount() {
@@ -60,12 +64,12 @@ export default class FooterCarousel extends React.Component {
   }
 
   tick = () =>
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       activeItemIndex:
-        (prevState.activeItemIndex + 1) % (noOfItems - noOfCards + 1)
+        (prevState.activeItemIndex + 1) % (noOfItems - noOfCards + 1),
     }));
 
-  onChange = (value) => this.setState({ activeItemIndex: value });
+  onChange = value => this.setState({ activeItemIndex: value });
 
   render() {
     return (

@@ -13,11 +13,11 @@ import {
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 //assets
-import logo from "../../assets/img/garuda-logo.png";
+import logo from "../../assets/img/logo.png";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -55,17 +55,12 @@ function IndexNavbar() {
       <Navbar
         className={"fixed-top " + navbarColor}
         expand="lg"
-        style={{ fontSize: "20px", backgroundColor: "#0b2334" }}
-      >
+        style={{ fontSize: "20px", backgroundColor: "#0b2334" }}>
         <Container>
           <div className="navbar-translate">
             <NavbarBrand href="#" target="_blank" id="navbar-brand">
-              <img src={logo} width="60px" height="60px" alt="garuda-logo" />{" "}
-              <span style={{ fontSize: "13px" }}>GARUDA META INDONESIA</span>
+              <img src={logo} width="200px" height="60px" alt="garuda-logo" />{" "}
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              GARUDA META INDONESIA
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -73,8 +68,7 @@ function IndexNavbar() {
                 setCollapseOpen(!collapseOpen);
               }}
               aria-expanded={collapseOpen}
-              type="button"
-            >
+              type="button">
               <span className="navbar-toggler-bar top-bar"></span>
               <span className="navbar-toggler-bar middle-bar"></span>
               <span className="navbar-toggler-bar bottom-bar"></span>
@@ -83,84 +77,66 @@ function IndexNavbar() {
           <Collapse
             className="justify-content-end"
             isOpen={collapseOpen}
-            navbar
-          >
+            navbar>
             <Nav navbar>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#pablo"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <p>EXPLORER</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem to="#" tag={Link}>
-                    &nbsp; CREATE TOKEN
-                  </DropdownItem>
-                  <DropdownItem href="#" tag={Link}>
-                    &nbsp; CREATE NFT
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#pablo"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <p>POOL SERVICE</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem to="#" tag={Link}>
-                    &nbsp; TOKENNOMICS
-                  </DropdownItem>
-                  <DropdownItem href="#" tag={Link}>
-                    &nbsp; POOL
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
               <NavItem>
                 <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
+                  href="#"
+                  onClick={e => {
                     e.preventDefault();
                     document
                       .getElementById("download-section")
                       .scrollIntoView();
-                  }}
-                >
-                  <p>SUPPORT</p>
+                  }}>
+                  <p>Schedule</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
                   href="#pablo"
-                  onClick={(e) => {
+                  onClick={e => {
                     e.preventDefault();
                     document
                       .getElementById("download-section")
                       .scrollIntoView();
-                  }}
-                >
-                  <p>APP</p>
+                  }}>
+                  <p>Players</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
+                  href="#"
+                  onClick={e => {
                     e.preventDefault();
                     document
                       .getElementById("download-section")
                       .scrollIntoView();
-                  }}
-                >
-                  <p>ECOSYSTEM</p>
+                  }}>
+                  <p>Teams</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="#"
+                  onClick={e => {
+                    e.preventDefault();
+                    document
+                      .getElementById("download-section")
+                      .scrollIntoView();
+                  }}>
+                  <p>Latest News</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="#"
+                  onClick={e => {
+                    e.preventDefault();
+                    document
+                      .getElementById("download-section")
+                      .scrollIntoView();
+                  }}>
+                  <p>Leaderboard</p>
                 </NavLink>
               </NavItem>
               <NavItem>

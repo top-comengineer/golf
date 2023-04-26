@@ -8,6 +8,7 @@ import FunctionList from "./sections/FunctionLisst";
 import Why from "./sections/Why";
 import Download from "./sections/Download";
 import Contact from "./sections/Contact";
+import CustomTab from "components/tabs/CustomTab";
 
 //Section component
 function Index() {
@@ -27,6 +28,7 @@ function Index() {
       <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
+        <CustomTab />
         <FunctionList />
         <Why />
         <Download />

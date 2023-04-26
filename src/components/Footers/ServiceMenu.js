@@ -8,7 +8,7 @@ import {
   UncontrolledDropdown,
   Navbar,
   Nav,
-  Container
+  Container,
 } from "reactstrap";
 
 const serviceMenu = [
@@ -22,8 +22,8 @@ const serviceMenu = [
       "How to make wallet",
       "Wallet features",
       "RPC connection for wallet",
-      "Emporium and exchanges"
-    ]
+      "Emporium and exchanges",
+    ],
   },
   {
     name: "Blockchain",
@@ -32,12 +32,12 @@ const serviceMenu = [
       "Spesification of blockchain",
       "API document",
       "Smart contract",
-      "Developer tool and discord of Virtual tenants"
-    ]
+      "Developer tool and discord of Virtual tenants",
+    ],
   },
   {
     name: "Aset Multi function",
-    subMenu: ["E-Collateral", "Asset Guarantee", "Asset bartering"]
+    subMenu: ["E-Collateral", "Asset Guarantee", "Asset bartering"],
   },
   {
     name: "Ecosystem",
@@ -45,8 +45,8 @@ const serviceMenu = [
       "Ecosystem chain",
       "Dapps, DAO, Dex, Airdrop, Nft, Tokenomic etc",
       "Chat",
-      "Security"
-    ]
+      "Security",
+    ],
   },
   {
     name: "Web4garmein",
@@ -57,9 +57,9 @@ const serviceMenu = [
       "E-tournament",
       "Hobbies",
       "E-proffession",
-      "Reward and nomination"
-    ]
-  }
+      "Reward and nomination",
+    ],
+  },
 ];
 export default function ServiceMenu() {
   return (
@@ -67,15 +67,14 @@ export default function ServiceMenu() {
       <Container style={{ display: "flex", justifyContent: "center" }}>
         <Nav>
           {serviceMenu.map((item, index) => (
-            <UncontrolledDropdown>
+            <UncontrolledDropdown key={index}>
               <DropdownToggle
                 caret
                 color="default"
                 href="#pablo"
                 nav
-                onClick={(e) => e.preventDefault()}
-                key={index}
-              >
+                onClick={e => e.preventDefault()}
+                key={index}>
                 <p>{item.name}</p>
               </DropdownToggle>
               <DropdownMenu style={{ backgroundColor: "unset!important" }}>
@@ -84,8 +83,7 @@ export default function ServiceMenu() {
                     to="#"
                     tag={Link}
                     key={index1}
-                    style={{ backgroundColor: "unset!important" }}
-                  >
+                    style={{ backgroundColor: "unset!important" }}>
                     &nbsp;
                     {Array.isArray(each) === false ? (
                       each

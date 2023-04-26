@@ -12,8 +12,8 @@ function IndexHeader() {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
+        // pageHeader.current.style.transform =
+        //   "translate3d(0," + windowScrollTop + "px,0)";
       };
       window.addEventListener("scroll", updateScroll);
       return function cleanup() {
@@ -26,27 +26,21 @@ function IndexHeader() {
     <div className="banner">
       <div
         style={{
-          backgroundImage:
-            "url(" + require("assets/img/banner/points.jpg") + ")",
+          backgroundImage: "url(" + require("assets/img/bg.jpg") + ")",
         }}
-        className="banner-image"
-      >
+        className="banner-image">
         <Container className="content">
           <Row>
             <Col xs={12} md={5} className="content-center">
               <div>
-                <h2 className="title weight-900">GARUDA META INDONESIA</h2>
+                <h1 className="title weight-900">Live Golf</h1>
                 <h3 className="weight-700">
-                  Start mining cryptocurrency today with our free, energy-light
-                  mobile app.
+                  Exciting, Amazing. Everybody can enjoy here.
                 </h3>
               </div>
             </Col>
             <Col xs={12} md={7} className="content-center">
-              <img
-                src={require("assets/img/banner/symbol (1).png")}
-                alt="symbol"
-              />
+              <img src={require("assets/img/logo.png")} alt="symbol" />
             </Col>
           </Row>
         </Container>

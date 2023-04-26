@@ -1,39 +1,37 @@
 /*eslint-disable*/
 import React from "react";
-import { Link } from "react-router-dom";
 // reactstrap components
 import { Container, Row, Col, Button } from "reactstrap";
 
 //carousel
 import FooterCarousel from "./FooterCarousel";
-import ServiceMenu from "./ServiceMenu";
 
 const comImg = [
   {
     icon: "now-ui-icons business_globe",
-    to: "https://garudametaindonesia.com/"
+    to: "https://9jagolf.com/",
   },
   {
     icon: "fab fa-twitter",
-    to: "https://twitter.com/AlfredPilist?t=VxfUON7fr9k9o0zCaSdoUg&s=09"
+    to: "https://twitter.com/9jagolf",
   },
   {
     icon: "fab fa-facebook-square",
-    to: "https://www.facebook.com/profile.php?id=100089573145867&mibextid=ZbWKwL"
+    to: "https://www.facebook.com/9jagolf",
   },
   {
     icon: "fab fa-instagram",
-    to: "https://instagram.com/garmein?igshid=ZDdkNTZiNTM="
+    to: "https://instagram.com/9jagolf",
   },
-  { icon: "fab fa-telegram", to: "https://t.me/garudametaindonesia" },
+  { icon: "fab fa-telegram", to: "https://t.me/9jagolf" },
   {
     icon: "fab fa-youtube",
-    to: "https://www.youtube.com/@garudametaindonesia"
+    to: "https://www.youtube.com/9jagolf",
   },
   {
     icon: "fab fa-tiktok",
-    to: "https://www.tiktok.com/@garuda_meta_indonesia"
-  }
+    to: "https://www.tiktok.com/9jagolf",
+  },
 ];
 function DarkFooter() {
   return (
@@ -46,11 +44,9 @@ function DarkFooter() {
         backgroundSize: "100% 100%",
         height: "600px",
         padding: "40px",
-        position: "relative"
-      }}
-    >
+        position: "relative",
+      }}>
       <FooterCarousel />
-      <ServiceMenu />
       <Container fluid>
         <Row>
           <Col xs={12} md={6} lg={3}></Col>
@@ -61,18 +57,16 @@ function DarkFooter() {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "50px"
-          }}
-        >
+            marginTop: "50px",
+          }}>
           <h2 className="weight-800">Thanks for your supporting us!</h2>
         </div>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            flexWrap: "wrap"
-          }}
-        >
+            flexWrap: "wrap",
+          }}>
           {comImg.map((icon, index) => (
             <a href={icon.to} target="_blank" key={index}>
               <Button
@@ -82,9 +76,8 @@ function DarkFooter() {
                 style={{
                   marginRight: "10px",
                   width: "50px",
-                  height: "50px"
-                }}
-              >
+                  height: "50px",
+                }}>
                 <i className={icon.icon} style={{ fontSize: "25px" }}></i>
               </Button>
             </a>
@@ -97,7 +90,7 @@ function DarkFooter() {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Ecosystem</a>
+                <a href="#">Contact Us</a>
               </li>
               <li>
                 <a href="#">Help</a>
@@ -105,7 +98,7 @@ function DarkFooter() {
             </ul>
           </nav>
           <div className="copyright" id="copyright">
-            © copyright :garudametaindonesia{new Date().getFullYear()}
+            © copyright 9jagolf {new Date().getFullYear()}
           </div>
         </div>
       </Container>

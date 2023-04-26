@@ -8,22 +8,26 @@ import { Container, Row, Col, Card } from "reactstrap";
 
 const initialData = [
   {
-    src: "assets/img/why/secure.png",
-    title: "Top Secure Trading Platform",
-    content:
-      "All your investment & asset is secured by the highest level on BitForex.",
+    src: "assets/img/why/1.jpg",
+    title: "Sync Up Your Chips Like Scottie Scheffler",
+    content: "Our site shares some tricks to learn golf.",
   },
   {
-    src: "assets/img/why/bug.png",
-    title: "Bug Bounty & White Hat",
-    content:
-      "High rewards for researchers who find serious vulnerabilities that affect system security",
+    src: "assets/img/why/2.png",
+    title: "Award-Winning Advice on Playing Better Gold in 2023",
+    content: "Jimmy Andreson, the PGA/LPGA Director of Golf Academy.",
   },
   {
-    src: "assets/img/why/professional.png",
-    title: "Professional Connectivity",
+    src: "assets/img/why/3.png",
+    title: "A Parent's Guide: How to Start Playing Youth Golf",
     content:
-      "24/7 support, get accurate and professional support across multiple time zones",
+      "If your child is showing an interest in golf, here are a few things you should know",
+  },
+  {
+    src: "assets/img/why/5.png",
+    title: "Fitness and Golf: How to Feel Better & Play Better in 2023",
+    content:
+      "Our site accross the country are implementing fitness into their menu of golf instruction programs",
   },
 ];
 export default function Why() {
@@ -32,14 +36,18 @@ export default function Why() {
   }, []);
   return (
     <div className="why">
-      <h2 className="weight-600">Why our platform?</h2>
+      <h2 className="weight-600">Improve Your Game On and Off the Course</h2>
       <Container fluid>
         <Row>
           {initialData.map((item, index) => (
-            <Col xs={12} md={4} key={index}>
+            <Col xs={12} md={3} key={index}>
               <Card className="card-background">
-                <img src={item.src} alt={item.title} />
-                <h3 className="weight-600">{item.title}</h3>
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  style={{ width: "250px", height: "200px" }}
+                />
+                <h3>{item.title}</h3>
                 <p>{item.content}</p>
               </Card>
             </Col>

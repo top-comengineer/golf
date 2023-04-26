@@ -10,78 +10,58 @@ export default function FunctionList() {
 
   const initialData = [
     {
-      title: "Faucet List",
-      src: "assets/img/function/faucet.webp",
-      content:
-        "Choose from our enormous list of 600+ faucets to claim from. We have a faucet list for each currency we support.",
+      title: "XXXXX",
+      src: "assets/img/function/equ (1).jpg",
+      content: "Hello everyone. Please use this stick",
     },
     {
-      title: "Affiliate Programme",
-      src: "assets/img/function/affiliate.webp",
-      content:
-        "Refer your friends, family and other people to increase your monthly income many folds. Earn money passively!",
+      title: "XXXXX",
+      src: "assets/img/function/equ (1).png",
+      content: "Hello everyone. Please use this.",
     },
     {
-      title: "Exchange",
-      src: "assets/img/function/exchange.webp",
-      content:
-        "Use our cryptocurrency exchange to convert your cryptocurrencies in a matter of seconds! In a blink of an eye!",
+      title: "AAAAAA",
+      src: "assets/img/function/equ (2).jpg",
+      content: "",
     },
     {
       title: "Games",
-      src: "assets/img/function/games.webp",
-      content:
-        "Love games? Sounds great! Win big in our games: Dice, Crash, Limbo Plinko and Roulette",
+      src: "assets/img/function/equ (2).png",
+      content: "",
     },
     {
-      title: "Multiple Cryptos",
-      src: "assets/img/function/multiple.webp",
-      content:
-        "Our platform supports all the major currencies such as Bitcoin, Ethereum, Dogecoin, Litecoin and more!",
+      title: "EEEEEEEE",
+      src: "assets/img/function/equ (3).jpg",
+      content: "",
     },
     {
-      title: "Faucet API",
-      src: "assets/img/function/faucet-api.webp",
-      content:
-        "Are you looking to start your own faucet? Harness the power of our robust faucet API to pay your users.",
+      title: "FFFFFFFF",
+      src: "assets/img/function/equ (4).jpg",
+      content: "",
     },
     {
-      title: "Merchant API",
-      src: "assets/img/function/merchant.webp",
-      content:
-        "Choose from our enormous list of 600+ faucets to claim from. We have a faucet list for each currency we support.",
-    },
-    {
-      title: "Advertising",
-      src: "assets/img/function/paid.webp",
-      content:
-        "Get high-quality traffic from our users at FaucetPay which results in great conversions and leads for your business.",
-    },
-    {
-      title: "Paid to Click",
-      src: "assets/img/function/offers.webp",
-      content:
-        "You can take some time and click on the advertisements available on our website to earn some additional income.",
-    },
-    {
-      title: "Offers and Surveys",
-      src: "assets/img/function/merchant.webp",
-      content:
-        "Are you looking to make any serious income? Try out our offer walls where you can earn $10 and more every day.",
+      title: "GGGGGGG",
+      src: "assets/img/function/equ (5).jpg",
+      content: "",
     },
   ];
   return (
     <div
       style={{
         backgroundImage: "linear-gradient(180deg,#06060c,#102b5c)",
-      }}
-    >
+      }}>
       <Container className="function-list">
+        <h1 style={{ fontWeight: "bold", color: "wheat" }}>Equipments</h1>
         <Row>
           {initialData.map((item, index) => (
             <Col xs={12} md={6} key={index} className="single-item pb-4">
               <Fade timeout={index * 300}>
-                <img src={item.src} alt={item.title} className="pb-3" />
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className="pb-3"
+                  style={{ width: "200px", height: "200px" }}
+                />
                 <h2>{item.title}</h2>
                 <p>{item.content}</p>
               </Fade>
