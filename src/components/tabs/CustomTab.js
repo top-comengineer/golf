@@ -19,7 +19,6 @@ import RoundTable from "components/tables/RoundTable";
 
 function CustomTab() {
   const [iconPills, setIconPills] = useState("4");
-  const [renderData, setRenderData] = useState([]);
   const [type, setType] = useState("teams");
   const [sheetData, setSheetData] = useState([]);
   const [rOrder, setROrder] = useState();
@@ -29,7 +28,7 @@ function CustomTab() {
     async function fetchTempData(order) {
       try {
         const response = await axios.get(
-          "http://localhost:3000/excel/test.xlsx",
+          "https://docs.google.com/spreadsheets/d/18QpgIpDa9LsMKQ1xX6-n1JcfWzxmKdOqe2vf08Sny7Q/edit?usp=sharing",
           { responseType: "arraybuffer" }
         );
         const data = new Uint8Array(response.data);
@@ -48,7 +47,7 @@ function CustomTab() {
   async function fetchData(order) {
     try {
       const response = await axios.get(
-        "http://localhost:3000/excel/test.xlsx",
+        "https://docs.google.com/spreadsheets/d/18QpgIpDa9LsMKQ1xX6-n1JcfWzxmKdOqe2vf08Sny7Q/edit?usp=sharing",
         { responseType: "arraybuffer" }
       );
       const data = new Uint8Array(response.data);
@@ -77,7 +76,7 @@ function CustomTab() {
                 onClick={e => {
                   e.preventDefault();
                   setIconPills("1");
-                  fetchData(4);
+                  fetchData(0);
                 }}>
                 Round 1
               </NavLink>
@@ -89,7 +88,7 @@ function CustomTab() {
                 onClick={e => {
                   e.preventDefault();
                   setIconPills("2");
-                  fetchData(5);
+                  fetchData(1);
                 }}>
                 Round 2
               </NavLink>
@@ -101,7 +100,7 @@ function CustomTab() {
                 onClick={e => {
                   e.preventDefault();
                   setIconPills("3");
-                  fetchData(6);
+                  fetchData(2);
                 }}>
                 Round 3
               </NavLink>
@@ -113,7 +112,7 @@ function CustomTab() {
                 onClick={e => {
                   e.preventDefault();
                   setIconPills("4");
-                  fetchData(7);
+                  fetchData(3);
                 }}>
                 All Rounds
               </NavLink>
