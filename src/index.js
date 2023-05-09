@@ -1,33 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-// styles for this kit
-import "assets/css/bootstrap.min.css";
-import "assets/scss/now-ui-kit.scss?v=1.5.0";
-import "assets/demo/demo.css?v=1.5.0";
-import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
-
-//assets
-import "assets/scss/garuda.scss";
-// pages for this kit
-import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Switch>
-      <Switch>
-        <Route path="/index" render={props => <Index {...props} />} />
-        <Route
-          path="/nucleo-icons"
-          render={props => <NucleoIcons {...props} />}
-        />
-        <Redirect to="/index" />
-        <Redirect from="/" to="/index" />
-      </Switch>
-    </Switch>
-  </BrowserRouter>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
